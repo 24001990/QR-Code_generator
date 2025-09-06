@@ -11,11 +11,30 @@ Run `pip install qrcode`
 ### How to run the script
 - Provide your desired URL in the script
 - Execute `python3 QR_code_generator.py`
+### Program
+```
+import qrcode
 
+input_URL = "https://www.google.com/"
+
+qr = qrcode.QRCode(
+    version=1,
+    error_correction=qrcode.constants.ERROR_CORRECT_L,
+    box_size=15,
+    image size=20pt,
+    border=0,
+)
+
+qr.add_data(input_URL)
+qr.make(fit=True)
+
+img = qr.make_image(fill_color="black", back_color="white")
+img.save("url_qrcode.png")
+
+print(qr.data_list)
+```
 ### Screenshot showing the sample use of the script
-<p align="center">
-  <a href="output 1.png"><img src="https://user-images.githubusercontent.com/85709371/151921721-132e76c1-1604-49ad-9234-1ef3cc9ac45b.png" alt="url_qrcode"></a>
-</p>
+![WhatsApp Image 2025-09-06 at 11 15 54_a927982c](https://github.com/user-attachments/assets/28147b7d-1911-4f55-bf69-971c95759e6d)
 
 ## *Author Name*
-[Vikrant](https://github.com/vikrant-v28)
+DODLA SUSMITHA
